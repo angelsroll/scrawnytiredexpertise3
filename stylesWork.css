@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+canvas {
+  background-color: #f0f0f0;
+  border: 2px solid black;
+}
+
+button, input {
+  position: absolute;
+  top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#powerInput {
+  left: 10px;
+}
+
+#angleInput {
+  left: 200px;
+}
+
+button {
+  left: 400px;
+}
+
+#ballCanvas {
+  position: relative;
+  top: 100px;
+}
+
+#sideViewCanvas {
+  position: absolute;
+  bottom: 0;
+  background-color: #e0e0e0; /* Darker gray background */
+}

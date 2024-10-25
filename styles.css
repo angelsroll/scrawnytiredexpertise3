@@ -1,0 +1,182 @@
+/* Existing Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+canvas {
+  background-color: #f0f0f0;
+  border: 2px solid black;
+}
+
+button, input {
+  position: absolute;
+  top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#powerInput {
+  left: 210px;
+}
+
+#angleInput {
+  left: 400px;
+}
+
+#userName {
+  left: 600px;
+}
+
+button {
+  left: 800px;
+}
+
+/* Override styles specifically for the "Show Queue" button */
+#showQueue {
+  position: absolute;
+  right: 50px; 
+  top: 10px;
+  padding: 5px 10px;  /* Reduce padding */
+  font-size: 16px;
+  width: auto; /* Prevent the button from stretching */
+}
+
+#ballCanvas {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  width: 1520px;
+  height: calc(100vh); /* 50px from top + 100px for the side screen */
+}
+
+#sideViewCanvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #e0e0e0;
+}
+
+#queueLogCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 104px); /* 100px for the side screen */
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse; /* Populate from bottom to top */
+}
+
+#queueLogHeader {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+  border-top: 1px solid white; /* Line above the text */
+  padding-top: 10px;
+}
+
+.queue-entry {
+  font-size: 16px;
+  padding: 5px;
+  border-top: 1px solid white;
+  margin-top: 5px;
+  text-align: right;
+}
+
+#historyLogCanvas {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 200px;
+  height: calc(100vh - 104px); /* 100px for the side screen */
+  background-color: #000;
+  box-sizing: border-box;
+  overflow: hidden; /* Hide the overflow */
+}
+
+#historyLogHeader {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.history-entry {
+  margin-bottom: 5px;
+  border-bottom: 1px solid #fff;
+  padding: 5px 5px;
+  color: #fff;
+}
+
+/* New Modal Styles */
+
+/* The Modal (hidden by default) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Queue content inside modal */
+#queueContent {
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.queue-entry-modal {
+  font-size: 16px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  margin-top: 5px;
+  text-align: left;
+  color: #333;
+}

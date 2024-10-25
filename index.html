@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Inputs for power, angle, and username -->
+    <input type="number" id="powerInput" placeholder="Enter power value" />
+    <input type="number" id="angleInput" placeholder="Enter angle (0-90)" />
+    <input type="text" id="userName" placeholder="Enter your username" />
+    <button id="animateButton">Start Animation</button>
+
+    <!-- Queue Log Display -->
+    <canvas id="ballCanvas" width="1520" height="980"></canvas>
+    <canvas id="sideViewCanvas" width="1920" height="100"></canvas>
+    <div id="queueLogCanvas"></div>
+    <div id="historyLogCanvas"></div>
+
+    <!-- Add Show Queue button -->
+    <button id="showQueue">Show Queue</button>
+
+    <!-- Modal for showing queue -->
+    <div id="queueModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="queueContent"></div>
+        </div>
+    </div>
+
+    <!-- External Libraries and Scripts -->
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="mainScreen.js"></script>
+    <script src="sideScreen.js"></script>
+    <script src="queueLog.js"></script>
+    <script src="historyLog.js"></script>
+    <script src="showQueue.js"></script>
+</body>
+</html>

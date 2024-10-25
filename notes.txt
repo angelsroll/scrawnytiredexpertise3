@@ -1,0 +1,74 @@
+todo:
+  main screen:
+    1) fix landing location (it seems like angle is taken into account over distance)
+    2) add in images
+    3) make creature location/size follow existing equations
+    4) make ball on main screen appear in front of or behind creature pending distance
+    5) creature animations?
+    6) put name, type, catch chance at top of screen
+    7) rotate ball in motion
+    8) contact triggers catch animation
+    9) add in catch chance calculation, either reverse catch animation or move on to next
+    10) take off top bar/inputs
+
+  side screen:
+    1) add creature image
+    2) make sidescreen user for historylog be the array user GOOD
+
+  log: CHECk
+    1) far right location, header GOOD
+    2) top to bottom GOOD
+    3) user and relation to object: way short, short, contact, long, way long options GOOD
+
+  queue:
+    1) right location, header GOOD
+    2) bottom to top GOOD
+    3) include 2 mins slowmode time ticker on people who threw recently GOOD
+    4) re-sort queue if people without slowmode cut in line GOOD
+    Troubleshoot queue (sometimes throws stay logged longer than they should. Need to check on when queue is cleared.)
+
+multiple scenes:
+  same zone:
+    1) initial animation, also each catch triggers
+    2) fetch assets (creature, noise)
+    3) fetch variables (distance, height, size, name, type, catch rate)
+
+  different zone:
+    1) intro animation
+    2) fetch assets(background, music)
+    3) fetch variables (physics equations)
+
+  zone specifics:
+    1) grass: basics (limit power to 300 and angle to 10-90)
+    2) volcano: final height variable based on looking up slope (effects: duration and distance, dne: initalVelocities, peakHeight), axis indicator on sideScreen
+    3) air: variable flight speeds, adds wind resistance factor based on speed (will impact sideview heavily as well)
+    4) water: ball is slightly bouyant, need negative angles for throwing, add water resistance on ball to x velocity
+    5) city: basics, add animated objects at set distance for impact, plus physics on ball after impace, omit creature location within set distance
+    6) cave: basics, moving flying creature location (side view as well)
+
+assets:
+  art:
+    1) ball in 3d
+    2) ball open
+    3) ball 3 different catch phases
+    4) grass, volcano, air, water, city, cave backgrounds
+    5) 51 creatures (and greyscale side profiles)
+
+  audio:
+    1) grass, volcano, air, water, city, cave background music
+    2) creature audio? can be reused
+    3) throw sound (based on long/short)
+    4) catch noises (contact and 3 phases)
+
+  animation:
+    1) catch animation
+    2) between creatures animation
+    3) between locations videos
+    4) intro video
+    5) outtro video
+    6) city objects movement
+    7) final creature movement
+
+  misc:
+    1) creature names, types, catch rates
+    
